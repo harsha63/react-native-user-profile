@@ -154,7 +154,7 @@ class Contact extends Component {
           <View style={styles.headerColumn}>
             <Image
               style={styles.userImage}
-              source={{uri: avatar}}
+              source={{uri: "avatar"}}
             />
             <Text style={styles.userNameText}>{name}</Text>
             <View style={styles.userAddressRow}>

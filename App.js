@@ -38,7 +38,7 @@ function Profile1StackScreen() {
   return (
     <Profile1Stack.Navigator
       screenOptions={{
-        headerShown: false
+        headerShown:false
       }}
     >
       <Profile1Stack.Screen name="Profile" component={Profile1} />
@@ -87,7 +87,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator 
         screenOptions={({ route }) => ({
-          tabBarIcon: props => <HomeIcon {...props}/>
+          tabBarIcon: props => <HomeIcon {...props}/>   //change to customized icons
         })}
         tabBarOptions={{
           activeTintColor: 'tomato',
@@ -110,8 +110,9 @@ export default function App() {
           },
         }}
       >
-        <Tab.Screen name="Profile1" component={Profile1StackScreen} />
+       
         <Tab.Screen name="Profile2" component={Profile2StackScreen} />
+        <Tab.Screen name="Profile1" component={Profile1StackScreen} />
         <Tab.Screen name="Profile3" component={Profile3StackScreen} />
         <Tab.Screen name="Product1" component={Product1StackScreen} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} />
@@ -119,3 +120,5 @@ export default function App() {
     </NavigationContainer>
   )
 }
+
+

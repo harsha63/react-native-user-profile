@@ -79,9 +79,118 @@ class SettingsScreen extends Component {
             </Text>
           </View>
         </View>
-        <InfoText text="Account" />
+        <InfoText text="Personal Details" />
         <View>
           <ListItem
+            title="Username"
+            rightTitle="nash"
+            rightTitleStyle={{ fontSize: 15 }}
+            onPress={() => this.onPressSetting()}
+            containerStyle={styles.listItemContainer}
+            leftIcon={
+              <BaseIcon
+                containerStyle={{ backgroundColor: '#C47EFF' }}
+                icon={{
+                  type: 'material',
+                  name: 'person',
+                }}
+              />
+            }
+            rightIcon={<Chevron />}
+          />
+          <ListItem
+            title="Password"
+            onPress={() => this.onPressSetting()}
+            containerStyle={styles.listItemContainer}
+            leftIcon={
+              <BaseIcon
+                containerStyle={{ backgroundColor: '#57DCE7' }}
+                icon={{
+                  type: 'material',
+                  name: 'eye',
+                }}
+              />
+            }
+            rightIcon={<Chevron />}
+          />
+          
+        </View>
+        <InfoText text="Account Details" />
+        <View>
+        <ListItem
+            title="Name"
+            rightTitle={name}
+            rightTitleStyle={{ fontSize: 15 }}
+            onPress={() => this.onPressSetting()}
+            containerStyle={styles.listItemContainer}
+            leftIcon={
+              <BaseIcon
+                containerStyle={{ backgroundColor: '#57DCE7' }}
+                icon={{
+                  type: 'material',
+                  name: 'pencil',
+                }}
+              />
+            }
+            rightIcon={<Chevron />}
+          />
+          <ListItem
+            title="Email"
+            rightTitle={firstEmail.email}
+            rightTitleStyle={{ fontSize: 15 }}
+            onPress={() => this.onPressSetting()}
+            containerStyle={styles.listItemContainer}
+            leftIcon={
+              <BaseIcon
+                containerStyle={{ backgroundColor: '#A4C8F0' }}
+                icon={{
+                  type: 'material',
+                  name: 'email',
+                }}
+              />
+            }
+            rightIcon={<Chevron />}
+          />
+          <ListItem
+            title="Location"
+            rightTitle="New York"
+            rightTitleStyle={{ fontSize: 15 }}
+            onPress={() => this.onPressSetting()}
+            containerStyle={styles.listItemContainer}
+            leftIcon={
+              <BaseIcon
+                containerStyle={{ backgroundColor: '#C47EFF' }}
+                icon={{
+                  type: 'material',
+                  name: 'place',
+                }}
+              />
+            }
+            rightIcon={<Chevron />}
+          />
+          
+          <ListItem
+            title="Contact Number"
+            rightTitle="9012345699"
+            rightTitleStyle={{ fontSize: 15 }}
+            onPress={() => this.onPressSetting()}
+            containerStyle={styles.listItemContainer}
+            leftIcon={
+              <BaseIcon
+                containerStyle={{ backgroundColor: '#00C001' }}
+                icon={{
+                  type: 'material',
+                  name: 'phone',
+                }}
+              />
+            }
+            rightIcon={<Chevron />}
+          />
+          
+        </View>
+        <InfoText text="More" />
+        <View>
+        <ListItem
             hideChevron
             title="Push Notifications"
             containerStyle={styles.listItemContainer}
@@ -104,61 +213,6 @@ class SettingsScreen extends Component {
             }
           />
           <ListItem
-            // chevron
-            title="Currency"
-            rightTitle="USD"
-            rightTitleStyle={{ fontSize: 15 }}
-            onPress={() => this.onPressSetting()}
-            containerStyle={styles.listItemContainer}
-            leftIcon={
-              <BaseIcon
-                containerStyle={{ backgroundColor: '#FAD291' }}
-                icon={{
-                  type: 'font-awesome',
-                  name: 'money',
-                }}
-              />
-            }
-            rightIcon={<Chevron />}
-          />
-          <ListItem
-            title="Location"
-            rightTitle="New York"
-            rightTitleStyle={{ fontSize: 15 }}
-            onPress={() => this.onPressSetting()}
-            containerStyle={styles.listItemContainer}
-            leftIcon={
-              <BaseIcon
-                containerStyle={{ backgroundColor: '#57DCE7' }}
-                icon={{
-                  type: 'material',
-                  name: 'place',
-                }}
-              />
-            }
-            rightIcon={<Chevron />}
-          />
-          <ListItem
-            title="Language"
-            rightTitle="English"
-            rightTitleStyle={{ fontSize: 15 }}
-            onPress={() => this.onPressSetting()}
-            containerStyle={styles.listItemContainer}
-            leftIcon={
-              <BaseIcon
-                containerStyle={{ backgroundColor: '#FEA8A1' }}
-                icon={{
-                  type: 'material',
-                  name: 'language',
-                }}
-              />
-            }
-            rightIcon={<Chevron />}
-          />
-        </View>
-        <InfoText text="More" />
-        <View>
-          <ListItem
             title="About US"
             onPress={() => this.onPressSetting()}
             containerStyle={styles.listItemContainer}
@@ -173,21 +227,7 @@ class SettingsScreen extends Component {
             }
             rightIcon={<Chevron />}
           />
-          <ListItem
-            title="Terms and Policies"
-            onPress={() => this.onPressSetting()}
-            containerStyle={styles.listItemContainer}
-            leftIcon={
-              <BaseIcon
-                containerStyle={{ backgroundColor: '#C6C7C6' }}
-                icon={{
-                  type: 'entypo',
-                  name: 'light-bulb',
-                }}
-              />
-            }
-            rightIcon={<Chevron />}
-          />
+         
           <ListItem
             title="Share our App"
             onPress={() => this.onPressSetting()}
@@ -205,23 +245,7 @@ class SettingsScreen extends Component {
             }
             rightIcon={<Chevron />}
           />
-          <ListItem
-            title="Rate Us"
-            onPress={() => this.onPressSetting()}
-            containerStyle={styles.listItemContainer}
-            leftIcon={
-              <BaseIcon
-                containerStyle={{
-                  backgroundColor: '#FECE44',
-                }}
-                icon={{
-                  type: 'entypo',
-                  name: 'star',
-                }}
-              />
-            }
-            rightIcon={<Chevron />}
-          />
+         
           <ListItem
             title="Send FeedBack"
             onPress={() => this.onPressSetting()}

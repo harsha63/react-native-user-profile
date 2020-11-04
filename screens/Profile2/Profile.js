@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     fontSize: 22.5,
     fontWeight: '600',
     textAlign: 'center',
+    fontFamily: 'Roboto',
   },
   userBioRow: {
     marginLeft: 40,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   userImage: {
-    borderRadius: 60,
+    borderRadius: 25,
     height: 120,
     marginBottom: 10,
     width: 120,
@@ -134,10 +135,9 @@ class Profile2 extends Component {
     tabs: {
       index: 0,
       routes: [
-        { key: '1', title: 'active', count: 31 },
-        { key: '2', title: 'like', count: 86 },
-        { key: '3', title: 'following', count: 95 },
-        { key: '4', title: 'followers', count: '1.3 K' },
+        { key: '1', title: 'MY RIDES', count: 31 },
+        { key: '2', title: 'MY DOCS', count: 86 },
+        { key: '3', title: 'MY LOGS', count: 95 },
       ],
     },
   }
@@ -179,12 +179,10 @@ class Profile2 extends Component {
     return (
       <View>
         <Animated.Text style={[styles.tabLabelText, { color }]}>
-          {route.count}
-        </Animated.Text>
-        <Animated.Text style={[styles.tabLabelNumber, { color }]}>
           {route.title}
-        </Animated.Text>
+        </Animated.Text>  
       </View>
+      
     )
   }
 
@@ -194,12 +192,8 @@ class Profile2 extends Component {
     switch (key) {
       case '1':
         return <Posts containerStyle={styles.sceneContainer} posts={posts} />
-      case '2':
-        return <Posts containerStyle={styles.sceneContainer} posts={posts} />
-      case '3':
-        return <Posts containerStyle={styles.sceneContainer} posts={posts} />
-      case '4':
-        return <Posts containerStyle={styles.sceneContainer} posts={posts} />
+      
+      
       default:
         return <View />
     }
